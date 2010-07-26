@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>JavaScript Box Slider</title>
+	<link rel="stylesheet" href="examples/main.css">
+	<script type="text/javascript" src="src/horizontal_box_slider.js"></script>
+</head>
+<body>
+<table class="layout">
+	<tr>
+		<th>
+		<h1>Box Slider</h1></th>
+		<td>
+			<p>
+				<a href="src/horizontal_box_slider.js">horizontal_box_slider.js</a> is very tiny (≈2.75KB)
+				framework agnostic &ldquo;carousel&rdquo; control.
+			</p>
+			<p><a href="http://github.com/downloads/NV/box-slider/jquery.horizontal_box_slider.js">jquery.horizontal_box_slider.js</a> (≈2KB minified) built on top of that. It scrolls smooth.</p>
+		</td>
+	</tr>
+	<tr>
+		<th></th>
+		<td><h2><abbr>API</abbr></h2></td>
+	</tr>
+	<tr>
+		<th>
+			<div id="turner_painting">
+				<img id="img_1" src="examples/turner/grand_junction_canal.jpg" alt="Grand Junction Canal at Southall Mill, 1810">
+				<img id="img_2" src="examples/turner/chichester_canal.jpg" alt="Chichester Canal, 1828">
+				<img id="img_3" src="examples/turner/chain_pier_brighton.jpg" alt="Chain Pier, Brighton, 1828">
+			</div>
+			<script>
+			var turner_painting = document.getElementById("turner_painting");
+			var pictures = turner_painting.getElementsByTagName("img");
+			var slider = new HorizontalBoxSlider(turner_painting, pictures);
+			</script>
+		</th>
+		<td>
+			<div>
+				<pre>var turner_painting = document.getElementById("turner_painting");
+var pictures = turner_painting.getElementsByTagName("img");
+var slider = new HorizontalBoxSlider(turner_painting, pictures)
+
+<a href="javascript:slider.next()">slider.next()</a>
+<a href="javascript:slider.previous()">slider.previous()</a>
+
+<a href="javascript:slider.left(20)">slider.left(20)</a>
+<a href="javascript:slider.left(395)">slider.left(395)</a>
+
+<a href="javascript:slider.scrollTo(pictures[0])">slider.scrollTo(pictures[0])</a>
+<a href="javascript:slider.scrollTo(pictures[1])">slider.scrollTo(pictures[1])</a>
+<a href="javascript:slider.scrollTo(pictures[2])">slider.scrollTo(pictures[2])</a>
+
+<a href="javascript:void(document.getElementById('current_index').innerHTML=slider.currentIndex())">slider.currentIndex()</a> <span class="comment">// &rarr; <samp id="current_index"></samp></span>
+
+<a href="javascript:slider.scrollToStart()">slider.scrollToStart()</a>
+<a href="javascript:slider.scrollToEnd()">slider.scrollToEnd()</a>
+</pre>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<th></th>
+		<td>
+			<h2>Why?</h2>
+			<p>horizontal_box_slider.js is using native scrolling.
+				There are a lot of &ldquo;<a href="http://www.queness.com/post/711/15-attractive-javascript-carousel-plugins">carousels</a>&rdquo;,
+				but none of them is using it.</p>
+			<h2><a href="tests/">Tests</a></h2>
+			<p>Works well in Chrome 6, Firefox 3.5, Safari 5, Opera 10.60, and IE&nbsp;8.
+				IE 6 and 7 have some issues with examples, but the script itself works.</p>
+			<h2>An example</h2>
+		</td>
+	</tr>
+</table>
+
+<a href="http://github.com/NV/box-slider">
+<img class="ribbon" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+</a>
+<iframe src="examples/leonardo/index.html" width="100%" height="400" frameborder="0"></iframe>
+</body></html>

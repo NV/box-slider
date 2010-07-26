@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Leonardo Da Vinci&rsquo;s Machines</title>
+	<link rel="stylesheet" href="../main.css">
+	<link rel="stylesheet" href="leo.css">
+</head>
+<body>
+<div id="leonardo_da_vinci_machines" class="box-slider">
+	<div class="items-wrapper">
+		<span class="group" id="flying_machines"><span class="item" id="flying_machine">
+			<img src="flying_machine.jpg">
+			<div class="fn">A flying machine</div>
+		</span><span class="item">
+			<img src="helicopter.jpg">
+			<div class="fn">A helicopter</div>
+		</span></span><span class="item">
+			<img src="parabolic_compass.jpg">
+			<div class="fn">A parabolic compass</div>
+		</span><span class="item">
+			<img src="machine_for_grinding_lenses.jpg">
+			<div class="fn">A machine for grinding <!--convex--> lenses</div>
+		</span><span class="group" id="hydraulic_machines"><span class="item">
+			<img src="hydraulic_machines.jpg">
+			<div class="fn">Various hydraulic machines</div>
+		</span><span class="item">
+			<img src="locks_on_a_river.jpg">
+			<div class="fn">Locks on a river</div>
+		</span><span class="item">
+			<img src="boat.jpg">
+			<div class="fn">A boat</div>
+		</span></span><span class="group" id="weapons"><span class="item">
+			<img src="artillery_park.jpg">
+			<div class="fn">An artillery park</div>
+		</span><span class="item">
+			<img src="cannons.jpg">
+			<div class="fn">Cannons</div>
+		</span><span class="item" id="crossbow">
+			<img src="crossbow.jpg">
+			<div class="fn">An enormous crossbow</div>
+		</span></span>
+	</div>
+	<div class="scroll-links">
+		<a href="#flying_machines" class="flying_machines">Flight machines</a>
+		<a href="#hydraulic_machines" class="hydraulic_machines">Hydraulic machines</a>
+		<a href="#weapons" class="weapons">Weapons</a>
+	</div>
+	<div class="buttons">
+		<button class="left"></button>
+		<button class="right"></button>
+	</div>
+</div>
+<p class="note">Leonardo Da Vinci&rsquo;s machines</p>
+<script type="text/javascript" src="../../src/horizontal_box_slider.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+<script type="text/javascript" src="../../src/jquery.horizontal_box_slider.js"></script>
+<script type="text/javascript">
+var leonardo_da_vinci_machines = $("#leonardo_da_vinci_machines");
+var items_wrapper = leonardo_da_vinci_machines.find(".items-wrapper");
+var da_slider = items_wrapper.horizontalBoxSlider(".item");
+var left_button = leonardo_da_vinci_machines.find(".left");
+var right_button = leonardo_da_vinci_machines.find(".right");
+
+right_button.click(function(){
+	da_slider.next();
+});
+left_button.click(function(){
+	da_slider.previous();
+});
+
+leonardo_da_vinci_machines.find(".scroll-links a").click(function(e){
+	var anchor = this.getAttribute("href").slice(1);
+	da_slider.scrollTo(document.getElementById(anchor));
+	return false;
+});
+
+
+function checkButtons(){
+	var left = da_slider.element.scrollLeft;
+	if (left === 0) {
+		left_button.addClass("disabled");
+	} else {
+		left_button.removeClass("disabled");
+	}
+
+	if (left >= da_slider.element.scrollWidth - da_slider.element.offsetWidth - 5) {
+		right_button.addClass("disabled");
+	} else {
+		right_button.removeClass("disabled");
+	}
+}
+
+items_wrapper.scroll(function(){
+	// Throttle
+	this._needsInvoke = true;
+	if (!this._scroll_timeout) {
+		this._needsInvoke = false;
+		var that = this;
+		this._scroll_timeout = setTimeout(function(){
+			if (that._needsInvoke) {
+				checkButtons();
+				that._needsInvoke = false;
+			}
+			that._scroll_timeout = null;
+		}, 300);
+	}
+});
+
+checkButtons();
+</script>
+</body></html>

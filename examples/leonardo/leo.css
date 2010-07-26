@@ -1,0 +1,114 @@
+h1 {
+	font-size: 2em;
+}
+.box-slider {
+	font-size: 14px;
+	background: #e5d6bc;
+	color: #5a4c3f;
+	margin-bottom: .5em;
+	position: relative;
+	overflow: hidden;
+}
+.box-slider .items-wrapper {
+	white-space: nowrap;
+	overflow: auto;
+}
+.box-slider .item {
+	padding-bottom: 10px;
+	display: inline-block;
+	text-align: center;
+}
+.box-slider .scroll-links {
+	position: relative;
+}
+.box-slider .scroll-links a {
+	display: inline-block;
+	background: rgb(229,214,188);
+	color: #000;
+	opacity: .7;
+	padding: 4px 1em 0;
+	position: absolute;
+	z-index: 99;
+	top: -21px;
+	border-bottom: 0;
+	-moz-border-radius: 0 0 12px 12px;
+	border-radius: 0 0 12px 12px;
+	-webkit-transition: opacity .1s linear;
+	-moz-transition: opacity .2s linear;
+	-o-transition: opacity .2s linear;
+	transition: opacity .2s linear;
+}
+.box-slider .scroll-links a:hover {
+	opacity: 1;
+}
+.buttons {}
+.buttons button {
+	border: 0;
+	position: absolute;
+	top: 50%;
+	width: 37px;
+	height: 51px;
+	margin-top: -25px;
+	opacity: .5;
+	cursor: pointer;
+}
+.buttons button:hover,
+.buttons button:focus {
+	opacity: 1;
+}
+.buttons .left {
+	left: -1px;
+	background: #FFF url(../arrows.png) no-repeat 10px 50%;
+	-moz-border-radius: 0 12px 12px 0;
+	border-radius: 0 12px 12px 0;
+	-webkit-box-shadow: 0 1px 3px #000;
+	-moz-box-shadow: 0 1px 3px #000;
+	-o-box-shadow: 0 1px 3px #000;
+}
+.buttons .left:hover {
+	left: 0;
+}
+.buttons .right {
+	right: -1px;
+	background: #FFF url(../arrows.png) no-repeat -22px 50%;
+	-moz-border-radius: 12px 0 0 12px;
+	border-radius: 12px 0 0 12px;
+	-webkit-box-shadow: 0 1px 3px #000;
+	-moz-box-shadow: 0 1px 3px #000;
+	-o-box-shadow: 0 1px 3px #000;
+}
+.buttons .right:hover {
+	right: 0;
+	border-right-width: 0;
+}
+.group {
+	display: inline-block;
+}
+#flying_machines {
+	color: #727722;
+}
+.box-slider .scroll-links a.flying_machines {
+	color: #727722;
+	left: 5%;
+}
+#hydraulic_machines {
+	color: #227762;
+}
+.box-slider .scroll-links a.hydraulic_machines {
+	color: #227762;
+	left: 38%;
+}
+#weapons {
+	color: #884122;
+}
+.box-slider .scroll-links a.weapons {
+	color: #884122;
+	right: 5%;
+}
+.note {
+	text-align: right;
+	padding-right: 2em;
+}
+.disabled {
+	display: none;
+}

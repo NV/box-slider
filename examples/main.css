@@ -1,0 +1,90 @@
+body {
+	background: #DDD;
+	margin: 0;
+	font-family: Cambria, Georgia, serif;
+}
+h1 {
+	text-align: center;
+	font: bold 3em Cambria, Georgia, serif;
+	margin-top: 0;
+	padding-top: 0;
+}
+h2 {
+	margin: 1em 0 .3em;
+	padding: 0;
+}
+
+img {
+	border: 0;
+}
+p {
+	line-height: 1.4;
+	margin: 0 0 .3em;
+}
+button {
+	font-family: inherit;
+}
+a {
+	color: #002b9a;
+}
+a:hover {
+	color: #0055be;
+}
+a[href^=javascript] {
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+a[href^='#'] {
+	text-decoration: none;
+	border-bottom: 1px dashed;
+}
+table {
+	margin: auto;
+}
+td, th {
+	padding-right: 2em;
+	vertical-align: top;
+	font-weight: normal;
+}
+pre {
+	margin-top: -.3em;
+	color: #600;
+}
+pre a {
+	color: #600;
+}
+abbr {
+	letter-spacing: .2em;
+}
+iframe {
+	border: 0;
+}
+
+.layout {
+	margin-top: 3em;
+}
+.layout td {
+	width: 460px;
+}
+
+#turner_painting {
+	width: 320px;
+	white-space: nowrap;
+	overflow-x: auto;
+	position: relative;
+	background: #ccc3b4;
+	-webkit-box-shadow: 0 2px 8px #333;
+	-moz-box-shadow: 0 2px 8px #333;
+	box-shadow: 0 2px 8px #333;
+}
+#turner_painting img {
+	vertical-align: middle;
+}
+.comment {
+	color: #888;
+}
+.ribbon {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
