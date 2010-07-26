@@ -2,7 +2,7 @@
 
 [![Leonardo demo](http://github.com/downloads/NV/box-slider/screenshot.png)](http://nv.github.com/box-slider/examples/leonardo/)
 
-Download [horizontal_box_slider.js (pure JS version)](http://nv.github.com/box-slider/horizontal_box_slider.js) or [jQuery plug-in](http://github.com/downloads/NV/box-slider/jquery.horizontal_box_slider.js).
+Download [horizontal_box_slider.js (pure JS version)](http://nv.github.com/box-slider/src/horizontal_box_slider.js) or [jQuery plug-in](http://github.com/downloads/NV/box-slider/jquery.horizontal_box_slider.js).
 
 
 ## [Tests](http://nv.github.com/box-slider/tests/)
