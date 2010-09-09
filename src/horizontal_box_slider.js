@@ -31,12 +31,12 @@ HorizontalBoxSlider.prototype.left = function(x) {
  * @return {number}
  */
 HorizontalBoxSlider.prototype.offsetLeftOf = function(element) {
-    var x = 0;
+	var x = 0;
 	while (element.offsetParent !== null && element !== this.element) {
 		x += element.offsetLeft;
 		element = element.offsetParent;
 	}
-    return x;
+	return x;
 };
 
 /**
