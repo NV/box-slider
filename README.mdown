@@ -5,6 +5,15 @@
 Download [horizontal_box_slider.js (pure JS version)](http://nv.github.com/box-slider/src/horizontal_box_slider.js) or [jQuery plug-in](http://github.com/downloads/NV/box-slider/jquery.horizontal_box_slider.js).
 
 
+## How to build jQuery plug-in
+
+    rake jquery
+
+If something went wrong, you could try 
+
+    cat src/horizontal_box_slider.js src/jquery.horizontal_box_slider.js > jquery.horizontal_box_slider.js
+
+
 ## [Tests](http://nv.github.com/box-slider/tests/)
 
 
