@@ -1,0 +1,28 @@
+{
+	"name": "box-slider",
+	"version": "1.0",
+	"title": "Box Slider",
+	"author": {
+		"name": "John Resig",
+		"url": "https://github.com/jeresig"
+	},
+	"licenses": [
+		{
+			"type":"MIT",
+			"url":"http://creativecommons.org/licenses/MIT/"
+		}
+	],
+	"dependencies": {
+		"jquery": "1"
+	},
+	"description": "A carousel plug-in that uses native scrolling. Pure JS and jQuery versions.",
+	"keywords": [
+		"carousel",
+		"slider"
+	],
+	"homepage": "http://nv.github.com/box-slider/",
+	"files": [
+		"src/horizontal_box_slider.js",
+		"src/jquery.horizontal_box_slider.js"
+	]
+}
